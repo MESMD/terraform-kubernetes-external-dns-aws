@@ -2,6 +2,7 @@
 *.tfstate*
 *.auto.tfvars
 .terraform
+.terraform.lock.hcl
 .terraform/*
 terraform.tfvars
 terraform.tfvars.example
