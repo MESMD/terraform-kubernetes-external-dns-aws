@@ -116,10 +116,10 @@ resource "kubernetes_cluster_role" "this" {
 
 resource "kubernetes_cluster_role_binding" "this" {
   metadata {
-    name = "aws-eks-external-dns-viewer-${lower(var.hosted_zone_id)}"
+    name = local.default_name
 
     labels = {
-      "app.kubernetes.io/name"       = "aws-eks-external-dns-viewer-${lower(var.hosted_zone_id)}"
+      "app.kubernetes.io/name"       = local.default_name
       "app.kubernetes.io/managed-by" = "terraform"
     }
   }
